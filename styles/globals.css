@@ -98,9 +98,9 @@ li{
 }*/
 .flex-container{
  border-radius: 15px;
-  margin: 12px;
+  margin: 5px;
   text-align: center;
-  width: 17rem;
+  width: 15rem;
   height: 15rem; 
   background-color: var(--clr-lighter);
 }
