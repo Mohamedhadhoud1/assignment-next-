@@ -191,6 +191,7 @@ products.slice(num, num+4).map((product)=>(
 </div> 
 </div>
       :
+      width>800 ?
       <div className='flex1'>
  <header>
          <p className='p11'>Edvora</p>
@@ -265,10 +266,54 @@ products.slice(num, num+4).map((product)=>(
    
         ))
        }
-      
+      {console.log("Mapped1",mappedCities.length)}
         {((mappedCities.length/2)+num2+4<mappedCities.length) || (mappedCities.length/2)-4==0 ?<div className="arrow right" onClick={()=>setnum2(num2+4)}></div>:null}
        </div>
         </div>
+        :
+        <div className='flex1'>
+        <header>
+                <p className='p11'>Edvora</p>
+               <h1>Products</h1>
+               <p className='p2'>Product Name</p><hr></hr>
+             </header>
+             <p  className='p1' style={{display:mappedCities.length==0? "block":"none"}}>No Products Avilable</p>
+             {console.log("Mapped",mappedCities.length)}
+       <div className='flex2'>
+                {num!=0? <div className="arrow left" onClick={()=>setnum(num-4)}></div>:null}
+                {
+                    
+              mappedCities.slice(num, num+4).map((product)=>(
+               
+              <div key={product.date+555555}className='flex-container'>
+               <li key={product.time}>
+               
+               <div className='row1'>
+               <div className='p-name'><p className='p3'>{product.product_name}</p><br></br>
+               <p>{ product.brand_name }</p><br></br>
+               <p className='p3'>${ product.price }</p></div>
+               
+                <div className="product-image" style={{ width: 100, height: 100,backgroundSize: 'cover',backgroundPosition: 'center', backgroundImage: `url(${product.image})` }}></div>                    
+               
+               </div>
+               <div className='row2' >
+               Date:{ product.date.split('T')[0] }<br></br>
+               City:{ product.address.city }<br></br>
+               
+               { product.discription }
+               </div>
+               
+               </li>
+               </div>
+          
+               ))
+              }
+             
+              {num<mappedCities.length/2?<div className="arrow right" onClick={()=>setnum(num+4)}></div>:null}
+             
+              </div>
+</div>
+  
 }  
     </ul>
     
