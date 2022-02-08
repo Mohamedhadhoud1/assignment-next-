@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "CI= react-scripts build",
+    "build":  "next build",
     "lint": "next lint"
   },
   "dependencies": {
