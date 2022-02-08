@@ -3,9 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-    "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
+    "start": "next start",
+    "build": "CI= react-scripts build",
     "lint": "next lint"
   },
   "dependencies": {
