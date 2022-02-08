@@ -38,7 +38,7 @@ export default function Home({products}) {
         <hr />
       <div>
          <select lable="ll" name="Products" defaultValue={productSelected} onChange={e=>{setProduct(e.target.value)}}>
-           <option value=''>Products</option>
+           <option value='' key={'565'}>Products</option>
          {products.map((product)=>(
         <option key={product.time} value={product.product_name}>{product.product_name}</option>
          ))
@@ -47,7 +47,7 @@ export default function Home({products}) {
       </div>
       <div>
          <select name="States" defaultValue={stateSelected} onChange={e=>{setState(e.target.value)}}>
-         <option value=''>States</option>
+         <option value='' key={'765'}>States</option>
          {mappedProducts.map((product)=>(
         <option key={product.time} value={product.address.state}>{product.address.state}</option>
          ))
@@ -56,7 +56,7 @@ export default function Home({products}) {
       </div>
       <div>
          <select name="Cities" defaultValue={citySelected} onChange={e=>{setCity(e.target.value)}}>
-         <option value=''>Cities</option>
+         <option value='' key={'585'}>Cities</option>
          {mappedStates.map((product)=>(
         <option key={product.time} value={product.address.city}>{product.address.city}</option>
          ))
@@ -85,7 +85,7 @@ export default function Home({products}) {
           
        products.slice(num, num+4).map((product)=>(
         
-       <div className='flex-container'>
+       <div key={product.date+100} className='flex-container'>
         <li key={product.time}>
         
         <div className='row1'>
@@ -121,7 +121,7 @@ export default function Home({products}) {
        products.slice((products.length/2)+num2, (products.length/2)+num2+4).map((product)=>(
        
         
-       <div className='flex-container'>
+       <div key={product.date+5} className='flex-container'>
         <li key={product.time}>
         
         <div className='row1'>
@@ -163,7 +163,7 @@ export default function Home({products}) {
    
 products.slice(num, num+4).map((product)=>(
  
-<div className='flex-container'>
+<div key={product.date+555} className='flex-container'>
  <li key={product.time}>
  
  <div className='row1'>
@@ -205,7 +205,7 @@ products.slice(num, num+4).map((product)=>(
              
        mappedCities.slice(num, num+4).map((product)=>(
         
-       <div className='flex-container'>
+       <div key={product.date+555555}className='flex-container'>
         <li key={product.time}>
         
         <div className='row1'>
@@ -242,7 +242,7 @@ products.slice(num, num+4).map((product)=>(
        mappedCities.slice((mappedCities.length/2)+num2, (mappedCities.length/2)+num2+4).map((product)=>(
        
         
-       <div className='flex-container'>
+       <div key={product.date+85} className='flex-container'>
         <li key={product.time}>
         
         <div className='row1'>
